@@ -3,14 +3,18 @@ body {
   padding: 0;
 }
 
-ul {
-  list-style-type: none;
+ul, ol {
+  list-style: none;
   padding: 0;
 }
 
 img {
   vertical-align: top;
   max-width: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 .list {
@@ -37,9 +41,68 @@ img {
 .tab {
   border: 1px solid #eee;
   padding: 10px;
+  margin: 10px auto;
+  max-width: 300px;
+}
+
+.tab__menu {
+  margin-right: -3px;
+}
+
+.tab__menu:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .tab__menu li {
-  display: inline-block;
+  float: left;
+  border: 1px solid #eee;
+  width: 33.33%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-right: -1px;
+}
+
+.tab__menu li.active {
+  border-bottom: 0;
+}
+
+.tab__menu li.active button, .tab__menu li:hover button {
+  font-weight: 600;
+}
+
+.tab__btn {
+  padding: 15px 10px;
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+  font-size: 1.1rem;
+  font-family: serif;
+}
+
+.tab__menu-list {
+  display: none;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-top: 0;
+}
+
+.tab__menu-list.active {
+  display: block;
+}
+
+.tab__menu-list li {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: .9em;
+}
+
+.tab__menu-list a {
+  color: #000;
+  font-family: serif;
+  font-size: 0.9rem;
 }
 /*# sourceMappingURL=style.css.map */

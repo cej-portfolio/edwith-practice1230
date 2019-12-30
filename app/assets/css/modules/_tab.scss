@@ -1,9 +1,63 @@
 .tab {
     border: 1px solid #eee;
     padding: 10px;
+    margin: 10px auto;
+    max-width: 300px;
+
     &__menu {
+        @include clearfix;
+        // 당겨준 너비만큼?을 다시 당겨줬다.
+        margin-right: -3px;
+
         li {
-            display: inline-block;
+            float: left;
+            border: 1px solid #eee;
+            width: 33.33%;
+            box-sizing: border-box;
+            margin-right: -1px;
+
+            &.active {
+                border-bottom: 0;
+            }
+
+            &.active button, &:hover button{
+                font-weight: 600;
+            }
+        }
+    }
+    &__btn {
+        padding: 15px 10px;
+        border: 0;
+        cursor: pointer;
+        width: 100%;
+        background-color: transparent;
+        // 투명을 안해주면 보더가 안보이더라.
+        font-size: 1.1rem;
+        font-family: serif;
+    }
+
+    &__menu-list {
+        display: none;
+        padding: 20px;
+        border: 1px solid #eee;
+        border-top: 0;
+
+        &.active {
+            display: block;
+        }
+
+        li {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-bottom: .9em;
+
+            
+        }
+        a {
+            color: #000;
+            font-family: serif;
+            font-size: 0.9rem;
         }
     }
 }
