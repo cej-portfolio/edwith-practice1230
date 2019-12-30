@@ -1,0 +1,9 @@
+.tab {
+    border: 1px solid #eee;
+    padding: 10px;
+    &__menu {
+        li {
+            display: inline-block;
+        }
+    }
+}
