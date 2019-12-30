@@ -1,1 +1,36 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+.list {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.list:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.list li {
+  float: left;
+  border: 1px solid #eee;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 650px;
+}
+/*# sourceMappingURL=style.css.map */
